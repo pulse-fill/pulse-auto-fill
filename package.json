@@ -1,0 +1,21 @@
+{
+  "name": "kl-pulse",
+  "version": "1.0.0",
+  "description": "auto-fill-pulse",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "node app.js"
+  },
+  "keywords": [
+    "pulse"
+  ],
+  "author": "codextra",
+  "engines": {
+    "node": "10.14.2"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
