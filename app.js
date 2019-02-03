@@ -57,7 +57,7 @@ function registerCron(msg,mail,name) {
 function postData(msg = '.',mail='',name=''){
   request.post({
     "headers": { "content-type": "application/json" },
-    "url": "http://klpulse.knowledgelens.com/status/createStatus",
+    "url": "https://klpulse.knowledgelens.com/status/createStatus",
     "body": JSON.stringify({
       "startDate": "02/01/2019",
       "name": `${name}`,
