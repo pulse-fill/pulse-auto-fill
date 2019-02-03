@@ -17,6 +17,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
-    "node": "^10.14.2"
+    "node": "^10.14.2",
+    "node-cron": "^2.0.3",
+    "request": "^2.88.0"
   }
 }
