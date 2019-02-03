@@ -63,6 +63,9 @@ function registerCron(msg, mail, name) {
     .catch((e)=> {
       console.log("already filled for the day");
     })
+  }, {
+    scheduled: true,
+    timezone: "Asia/Kolkata"
   });
 }
 
