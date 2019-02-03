@@ -24,33 +24,33 @@ const server = http.createServer((req, res) => {
     res.end(`
           <!doctype html>
           <html>
-          <body>
+            <body>
               <form action="/" method="post">
-                  <input type="text" name="username_mail" placeholder="mail id leaving the @knowledgelens.com ." /><br />
-                  <input type="text" name="default_msg" placeholder="default message to be filled" /><br />
-                  <input type="text" name="username"  placeholder="exact username" /><br />
-                  <button>Save</button>
+                <input type="text" name="username_mail" placeholder="mail id leaving the @knowledgelens.com ." /><br />
+                <input type="text" name="default_msg" placeholder="default message to be filled" /><br />
+                <input type="text" name="username"  placeholder="exact username" /><br />
+                <button>Save</button>
               </form>
-          </body>
+            </body>
           </html>
       `);
   }
 });
-server.listen(5000);
-function collectRequestData(request, callback) {
-  const FORM_URLENCODED = "application/x-www-form-urlencoded";
-  if (request.headers["content-type"] === FORM_URLENCODED) {
-    let body = "";
-    request.on("data", chunk => {
-      body += chunk.toString();
-    });
-    request.on("end", () => {
-      callback(parse(body));
-    });
-  } else {
-    callback(null);
-  }
-}
+server.listen(process.env.PORT || 5000);
+// function collectRequestData(request, callback) {
+//   const FORM_URLENCODED = "application/x-www-form-urlencoded";
+//   if (request.headers["content-type"] === FORM_URLENCODED) {
+//     let body = "";
+//     request.on("data", chunk => {
+//       body += chunk.toString();
+//     });
+//     request.on("end", () => {
+//       callback(parse(body));
+//     });
+//   } else {
+//     callback(null);
+//   }
+// }
 
 function registerCron(msg, mail, name) {
   cron.schedule("* * * * *", function() {
