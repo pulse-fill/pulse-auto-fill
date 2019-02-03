@@ -52,7 +52,7 @@ function collectRequestData(request, callback) {
 }
 
 function registerCron(msg, mail, name) {
-  cron.schedule("0 0 9 * * MON-FRI", function() {
+  cron.schedule("0 0 9 * * *", function() {
     var startDate = getTodaysDate();
     console.log(startDate);
     checkIfFilledStatusForDate(startDate,name,mail)
