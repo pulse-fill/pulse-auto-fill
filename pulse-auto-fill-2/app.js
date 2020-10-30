@@ -51,6 +51,7 @@ function collectRequestData(request, callback) {
   }
 }
 
+<<<<<<< Updated upstream:app.js
 function registerCron(msg, mail, name) {
   cron.schedule("0 9 * * MON-FRI", function() {
     var startDate = getTodaysDate();
@@ -97,6 +98,24 @@ function checkIfFilledStatusForDate(date,name,mail) {
       (error, respnse, body) => {
         if(error) {
           resolve();
+=======
+app.post("/postJson", function(req, res) {
+  // res.sendFile(path.join(__dirname, "index.html"));
+  res.json(
+    {
+      "developersList" : [
+        {
+          "name" : "sai",
+          "tagLine": "crazy"
+        },
+        {
+          "name" : "sai2",
+          "tagLine": "crazy"
+        },
+        {
+          "name" : "sai5",
+          "tagLine": "crazy"
+>>>>>>> Stashed changes:pulse-auto-fill-2/app.js
         }
         if(respnse.hasOwnProperty('body')) {
           var resp = JSON.parse(body);

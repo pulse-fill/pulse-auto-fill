@@ -1,0 +1,14 @@
+version: '2'
+services:
+  service1:
+    build: ./pulse-auto-fill'
+    ports:
+      - '5000:3000'
+    mac_address: 02:42:ac:1d:00:02
+    restart: always
+  service2:
+    build: ./pulse-auto-fill-2
+    ports:
+      - '5001:3000'
+    mac_address: 02:42:ac:1d:00:03
+    restart: always
